@@ -1,0 +1,7 @@
+/downloads/
+/env.local.cmd
+/env.local.sh
+/artifacts/claude-code/
+/artifacts/claude-desktop/
+*.part
+__pycache__/

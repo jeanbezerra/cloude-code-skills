@@ -1,0 +1,36 @@
+{
+  "downloaded_at_utc": "2026-10-27T23:23:07.492094+00:00",
+  "official_documentation": [
+    "https://claude.com/download",
+    "https://support.claude.com/en/articles/12622703-deploy-claude-desktop-for-windows",
+    "https://code.claude.com/docs/en/desktop-linux"
+  ],
+  "artifacts": [
+    {
+      "product": "Claude Desktop (includes Claude Code)",
+      "path": "artifacts/claude-desktop/3.6556.2.0/windows-x64/claude-desktop-3.6556.2.0-windows-x64.msix",
+      "source_url": "https://claude.ai/api/desktop/win32/x64/msix/latest/redirect",
+      "resolved_url": "https://downloads.claude.ai/releases/win32/x64/3.6556.2/Claude-20c019a1e61fa5b687616af57d31f97bb3181723.msix",
+      "size_bytes": 284230330,
+      "sha256": "c0ac245c9ad458abd550bcbf2a0b34c75c51173a27f3c870602e5452cf3484f1",
+      "platform": "windows-x64",
+      "version": "3.6556.2.0",
+      "notes": "Official full MSIX package, rather than the online ClaudeSetup.exe bootstrapper. Installation is subject to Windows administrator and application deployment policies; use App Installer or the organization's software deployment tooling. Downloading does not install or disable updates.",
+      "product_id": "claude-desktop"
+    },
+    {
+      "product": "Claude Desktop (includes Claude Code)",
+      "path": "artifacts/claude-desktop/3.6556.2/linux-x64/claude-desktop-3.6556.2-linux-x64.deb",
+      "source_url": "https://downloads.claude.ai/claude-desktop/apt/stable/pool/main/c/claude-desktop/claude-desktop_3.6556.2_amd64.deb",
+      "resolved_url": "https://downloads.claude.ai/claude-desktop/apt/stable/pool/main/c/claude-desktop/claude-desktop_3.6556.2_amd64.deb",
+      "size_bytes": 169811528,
+      "sha256": "0f6ed1f2845c30419b8545a8320676d7464a19f625e05e02919238aa6978ecb4",
+      "platform": "linux-x64",
+      "version": "3.6556.2",
+      "official_sha256": "0f6ed1f2845c30419b8545a8320676d7464a19f625e05e02919238aa6978ecb4",
+      "official_index_url": "https://downloads.claude.ai/claude-desktop/apt/stable/dists/stable/main/binary-amd64/Packages",
+      "notes": "Official beta for Ubuntu 22.04+ or Debian 12+, amd64. File size and SHA-256 matched Anthropic's APT Packages index. Package installation may need distribution dependencies. To avoid registering Anthropic's APT repository, set CLAUDE_DESKTOP_ADD_REPO=\"false\" in /etc/default/claude-desktop before installation, per official documentation.",
+      "product_id": "claude-desktop"
+    }
+  ]
+}

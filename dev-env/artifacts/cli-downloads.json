@@ -1,0 +1,36 @@
+{
+  "downloaded_at_utc": "2026-10-27T23:23:46.413179+00:00",
+  "artifacts": [
+    {
+      "product": "Claude Code CLI",
+      "product_id": "claude-code",
+      "platform": "windows-x64",
+      "version": "2.1.308",
+      "channel": "stable",
+      "path": "artifacts/claude-code/2.1.308/windows-x64/claude-code-2.1.308-windows-x64.exe",
+      "source_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/win32-x64/claude.exe",
+      "resolved_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/win32-x64/claude.exe",
+      "sha256": "c9796ba22a9221586b36371b36f5b66198d66eb4badf6a4cf4a5f7b07becea53",
+      "size_bytes": 297376928,
+      "official_sha256": "c9796ba22a9221586b36371b36f5b66198d66eb4badf6a4cf4a5f7b07becea53",
+      "official_manifest_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/manifest.json"
+    },
+    {
+      "product": "Claude Code CLI",
+      "product_id": "claude-code",
+      "platform": "linux-x64",
+      "version": "2.1.308",
+      "channel": "stable",
+      "path": "artifacts/claude-code/2.1.308/linux-x64/claude-code-2.1.308-linux-x64",
+      "source_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/linux-x64/claude",
+      "resolved_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/linux-x64/claude",
+      "sha256": "356733f185fa988e6bf3aa9a555269fdd167982a2e2a80d3c8a78037bb92ad58",
+      "size_bytes": 292232560,
+      "official_sha256": "356733f185fa988e6bf3aa9a555269fdd167982a2e2a80d3c8a78037bb92ad58",
+      "official_manifest_url": "https://downloads.claude.ai/claude-code-releases/2.1.308/manifest.json"
+    }
+  ],
+  "official_documentation": [
+    "https://code.claude.com/docs/en/setup"
+  ]
+}

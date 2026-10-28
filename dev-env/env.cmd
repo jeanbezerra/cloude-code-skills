@@ -1,0 +1,20 @@
+@echo off
+rem Use CALL env.cmd so these variables remain in the current CMD session.
+set "DEV_ENV_HOME=%~dp0"
+if exist "%DEV_ENV_HOME%env.local.cmd" call "%DEV_ENV_HOME%env.local.cmd"
+if not defined DEV_ENV_DOWNLOAD_DIR set "DEV_ENV_DOWNLOAD_DIR=%DEV_ENV_HOME%downloads"
+if not defined DEV_ENV_CATALOG set "DEV_ENV_CATALOG=%DEV_ENV_HOME%artifacts\catalog.txt"
+if not defined DEV_ENV_INSTALL_DIR set "DEV_ENV_INSTALL_DIR=%LOCALAPPDATA%\ClaudeDevEnv\bin"
+if not defined S3_BUCKET set "S3_BUCKET=jb-static-files-177862772785-sa-east-1-an"
+if not defined S3_REGION set "S3_REGION=sa-east-1"
+if not defined S3_PREFIX set "S3_PREFIX=dev-env"
+if not defined S3_BASE_URL if defined S3_BUCKET set "S3_BASE_URL=https://%S3_BUCKET%.s3.%S3_REGION%.amazonaws.com/%S3_PREFIX%"
+if defined S3_BASE_URL if "%S3_BASE_URL:~-1%"=="/" set "S3_BASE_URL=%S3_BASE_URL:~0,-1%"
+set "DISABLE_AUTOUPDATER=1"
+set "DISABLE_UPDATES=1"
+set "CLAUDE_CODE_USE_POWERSHELL_TOOL=0"
+if not defined CLAUDE_CODE_GIT_BASH_PATH if exist "%ProgramFiles%\Git\bin\bash.exe" set "CLAUDE_CODE_GIT_BASH_PATH=%ProgramFiles%\Git\bin\bash.exe"
+if not defined CLAUDE_CODE_GIT_BASH_PATH if exist "%LOCALAPPDATA%\Programs\Git\bin\bash.exe" set "CLAUDE_CODE_GIT_BASH_PATH=%LOCALAPPDATA%\Programs\Git\bin\bash.exe"
+if not "%DEV_ENV_PATH_ENTRY%"=="%DEV_ENV_INSTALL_DIR%" set "PATH=%DEV_ENV_INSTALL_DIR%;%PATH%"
+set "DEV_ENV_PATH_ENTRY=%DEV_ENV_INSTALL_DIR%"
+exit /b 0

@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadClaudeDevEnv",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::jb-static-files-177862772785-sa-east-1-an/dev-env/artifacts/claude-code/*",
+        "arn:aws:s3:::jb-static-files-177862772785-sa-east-1-an/dev-env/artifacts/claude-desktop/*"
+      ],
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "true"
+        }
+      }
+    }
+  ]
+}

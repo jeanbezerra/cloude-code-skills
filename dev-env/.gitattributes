@@ -1,0 +1,7 @@
+*.cmd text eol=crlf
+*.sh text eol=lf
+*.txt text eol=lf
+SHA256SUMS text eol=lf
+*.exe binary
+*.msix binary
+*.deb binary
