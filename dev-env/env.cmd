@@ -13,8 +13,7 @@ if defined S3_BASE_URL if "%S3_BASE_URL:~-1%"=="/" set "S3_BASE_URL=%S3_BASE_URL
 set "DISABLE_AUTOUPDATER=1"
 set "DISABLE_UPDATES=1"
 set "CLAUDE_CODE_USE_POWERSHELL_TOOL=0"
-if not defined CLAUDE_CODE_GIT_BASH_PATH if exist "%ProgramFiles%\Git\bin\bash.exe" set "CLAUDE_CODE_GIT_BASH_PATH=%ProgramFiles%\Git\bin\bash.exe"
-if not defined CLAUDE_CODE_GIT_BASH_PATH if exist "%LOCALAPPDATA%\Programs\Git\bin\bash.exe" set "CLAUDE_CODE_GIT_BASH_PATH=%LOCALAPPDATA%\Programs\Git\bin\bash.exe"
+call "%DEV_ENV_HOME%find-git-bash.cmd" --quiet
 if not "%DEV_ENV_PATH_ENTRY%"=="%DEV_ENV_INSTALL_DIR%" set "PATH=%DEV_ENV_INSTALL_DIR%;%PATH%"
 set "DEV_ENV_PATH_ENTRY=%DEV_ENV_INSTALL_DIR%"
 exit /b 0
